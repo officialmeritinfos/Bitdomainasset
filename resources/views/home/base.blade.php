@@ -516,8 +516,8 @@
         "Austria","Austria","Austria","Australia","Australia","Australia","Russia","Russia",
         "United States","United Kingdom","Spain","Spain","India","England","Italy","Ukraine"
     ];
-    var listPlans = ['$500','$5000','$1,000','$1000','$550','$3000','$690', '$360',
-        '$700', '$600',"$500","$700","$1,000","$1289","$5000","$7000","$10000"];
+    var listPlans = ['£500','£5000','£1,000','£1000','£550','£3000','£690', '£360',
+        '£700', '£600',"£500","£700","£1,000","£1289","£5000","£7000","£10000"];
     interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
     var run = setInterval(request, interval);
 
