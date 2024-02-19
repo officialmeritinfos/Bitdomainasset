@@ -192,8 +192,8 @@
                             </div>
                             <div class="description">
                                 <p><i class="lni lni-checkmark-circle"></i>
-                                    Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
-                                        ${{number_format($package->maxAmount,2)}}
+                                    Price: £{{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
+                                        £{{number_format($package->maxAmount,2)}}
                                     @else
                                         Unlimited
                                     @endif

@@ -25,7 +25,7 @@
                     @foreach($withdrawals as $withdrawal)
                         <tr>
                             <td>{{$withdrawal->reference}}</td>
-                            <td>{{number_format($withdrawal->amount,2)}}</td>
+                            <td>£{{number_format($withdrawal->amount,2)}}</td>
                             <td>{{$withdrawal->details}}</td>
                             <td>{{$withdrawal->asset}}</td>
                             <td>{{$withdrawal->created_at}}</td>

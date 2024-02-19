@@ -29,12 +29,12 @@
                                     <option value="{{$package->id}}">
                                         {{$package->name}}
                                         (
-                                        ${{number_format($package->minAmount,2)}}
+                                        £{{number_format($package->minAmount,2)}}
                                         -
                                         @if($package->isUnlimited ==1)
                                             Unlimited
                                         @else
-                                            ${{number_format($package->maxAmount)}}
+                                            £{{number_format($package->maxAmount)}}
                                         @endif
                                     )
                                     </option>

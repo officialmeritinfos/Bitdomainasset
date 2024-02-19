@@ -79,7 +79,7 @@
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Account Funding</td>
-                                    <td>${{number_format($deposit->amount,2)}}</td>
+                                    <td>£{{number_format($deposit->amount,2)}}</td>
                                     <td>{{$deposit->asset}}</td>
                                     <td>{{$deposit->details}}</td>
                                 </tr>
@@ -100,7 +100,7 @@
                                 </p>
                             @else
                                 <p>
-                                    You are to send <b>{{number_format($deposit->amount,2)}} of {{$deposit->asset}}</b>
+                                    You are to send <b>£{{number_format($deposit->amount,2)}} of {{$deposit->asset}}</b>
                                     to the address <b style="font-size:20px;" id="address">{{$deposit->details}}</b>.<br>
                                     After making payment, contact support for instant crediting.
                                 </p>

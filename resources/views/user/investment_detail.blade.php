@@ -68,8 +68,8 @@
                             <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>${{number_format($investment->amount,2)}}</td>
-                                <td>${{number_format($investment->currentProfit,2)}}</td>
+                                <td>£{{number_format($investment->amount,2)}}</td>
+                                <td>£{{number_format($investment->currentProfit,2)}}</td>
                                 <td>{{number_format($investment->roi)}}%</td>
                                 <td>${{number_format($investment->profitPerReturn*$investment->numberOfReturns,2)}}</td>
                             </tr>
@@ -95,7 +95,7 @@
                                 <td>{{number_format($investment->currentReturn)}}</td>
                                 <td>{{number_format($investment->numberOfReturns)}}</td>
                                 <td>{{date('d M Y h:i:s a',$investment->nextReturn)}}</td>
-                                <td>${{number_format($investment->profitPerReturn,2)}}</td>
+                                <td>£{{number_format($investment->profitPerReturn,2)}}</td>
                             </tr>
                             </tbody>
 
@@ -115,7 +115,6 @@
                 <span class="email-text">Read the instruction below</span>
 
                 <div class="email-content">
-                    <p class="free-report">You have <span>1 free report</span> remaining.</p>
                     <p class="report">
                         You are to send <b>{{number_format($investment->amount,2)}} of {{$investment->asset}}</b>
                         to the address <b style="font-size:20px;" id="address">{{$investment->wallet}}</b>.<br>

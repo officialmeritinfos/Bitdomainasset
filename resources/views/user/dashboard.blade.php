@@ -24,7 +24,7 @@
                     <div class="single-today-card d-flex align-items-center">
                         <div class="flex-grow-1">
                             <span class="today">Today's Earning</span>
-                            <h6>${{number_format($injected->userDailyEarning($user->id),2)}}</h6>
+                            <h6>£{{number_format($injected->userDailyEarning($user->id),2)}}</h6>
                         </div>
 
                         <div class="flex-shrink-0 align-self-center">
@@ -37,7 +37,7 @@
                     <div class="single-today-card d-flex align-items-center">
                         <div class="flex-grow-1">
                             <span class="today">Account Balance</span>
-                            <h6>${{number_format($user->profit,2)}}</h6>
+                            <h6>£{{number_format($user->profit,2)}}</h6>
                         </div>
 
                         <div class="flex-shrink-0 align-self-center">
@@ -50,7 +50,7 @@
                     <div class="single-today-card d-flex align-items-center">
                         <div class="flex-grow-1">
                             <span class="today">Referral Balance</span>
-                            <h6>${{number_format($user->refBal,2)}}</h6>
+                            <h6>£{{number_format($user->refBal,2)}}</h6>
                         </div>
 
                         <div class="flex-shrink-0 align-self-center">
@@ -63,7 +63,7 @@
                     <div class="single-today-card d-flex align-items-center">
                         <div class="flex-grow-1">
                             <span class="today">Withdrawals</span>
-                            <h6>${{number_format($user->withdrawals,2)}}</h6>
+                            <h6>£{{number_format($user->withdrawals,2)}}</h6>
                         </div>
 
                         <div class="flex-shrink-0 align-self-center">
@@ -92,11 +92,11 @@
                                 <ul>
                                     <li>
                                         <span>This Month</span>
-                                        <h6 class="this-month">${{number_format($injected->userCurrentMonthEarning($user->id),2)}}</h6>
+                                        <h6 class="this-month">£{{number_format($injected->userCurrentMonthEarning($user->id),2)}}</h6>
                                     </li>
                                     <li>
                                         <span>Last Month</span>
-                                        <h6>${{number_format($injected->userPreviousMonthEarning($user->id),2)}}</h6>
+                                        <h6>£{{number_format($injected->userPreviousMonthEarning($user->id),2)}}</h6>
                                     </li>
                                 </ul>
                             </div>
@@ -202,7 +202,7 @@
                                 </div>
                             </td>
                             <td>
-                                {{number_format($latest->amount,2)}}
+                                £ {{number_format($latest->amount,2)}}
                             </td>
                             <td>
                                 {{strtoupper(date('d M, Y - h:i a',strtotime($latest->created_at)))}}

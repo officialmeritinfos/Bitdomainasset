@@ -107,7 +107,7 @@ class Withdrawals extends Controller
             //check if admin exists
             $admin = User::where('is_admin',1)->first();
             $userMessage = "
-                Your new withdrawal request of $<b>".$input['amount']." </b>
+                Your new withdrawal request of £<b>".$input['amount']." </b>
                 has been received and will be processed soonest. Your Withdrawal reference Id is <b>".$ref."</b>
             ";
             //send mail to user
@@ -116,7 +116,7 @@ class Withdrawals extends Controller
             //send mail to Admin
             if (!empty($admin)){
                 $adminMessage = "
-                    A new withdrawal request of $<b>".$input['amount']."</b>
+                    A new withdrawal request of £<b>".$input['amount']."</b>
                     has been submitted by the investor <b>".$user->name."</b> with reference <b>".$ref."</b>
                 ";
                 //SendInvestmentNotification::dispatch($admin,$adminMessage,'New Withdrawal Request');

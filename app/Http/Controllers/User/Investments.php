@@ -154,12 +154,12 @@ class Investments extends Controller
             $admin = User::where('is_admin',1)->first();
             if ($input['account']!=1){
                 $userMessage = "
-                    Your new deposit of $<b>".$input['amount']." </b>
+                    Your new deposit of £<b>".$input['amount']." </b>
                     has been received, and started. Your Investment reference Id is <b>".$ref."</b>
                 ";
             }else{
                 $userMessage = "
-                    Your new deposit of $<b>".$input['amount']." </b>
+                    Your new deposit of £<b>".$input['amount']." </b>
                     has been received; please proceed to making your payment to the address below:
                     <br>".$coinExists->address.".<p>Once payment has been made, contact support for
                     verification and approval.</p>
@@ -173,7 +173,7 @@ class Investments extends Controller
             //send mail to Admin
             if (!empty($admin)){
                 $adminMessage = "
-                    A new investment of $<b>".$input['amount']."</b>
+                    A new investment of £<b>".$input['amount']."</b>
                     has been started by the investor <b>".$user->name."</b> with reference <b>".$ref."</b>
                 ";
                 //SendInvestmentNotification::dispatch($admin,$adminMessage,'New Investment Initiation');

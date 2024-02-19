@@ -160,7 +160,7 @@ class Investors extends Controller
         if ($update){
             //send mail to investor
             $userMessage = "
-                Your Account balance has been credited with $<b>" . $input['amount'] . " .
+                Your Account balance has been credited with £<b>" . $input['amount'] . " .
             ";
             //SendInvestmentNotification::dispatch($investor, $userMessage, 'Balance Topup');
             $investor->notify(new InvestmentMail($investor, $userMessage, 'Balance Topup'));
@@ -191,7 +191,7 @@ class Investors extends Controller
         if ($update){
             //send mail to investor
             $userMessage = "
-                Your Profit balance has been credited with $<b>" . $input['amount'] . " .
+                Your Profit balance has been credited with £<b>" . $input['amount'] . " .
             ";
             //SendInvestmentNotification::dispatch($investor, $userMessage, 'Profit Topup');
             $investor->notify(new InvestmentMail($investor, $userMessage, 'Profit Topup'));
@@ -222,7 +222,7 @@ class Investors extends Controller
         if ($update){
             //send mail to investor
             $userMessage = "
-                Your Referral balance has been credited with $<b>" . $input['amount'] . " .
+                Your Referral balance has been credited with £<b>" . $input['amount'] . " .
             ";
             //SendInvestmentNotification::dispatch($investor, $userMessage, 'Referral Topup');
             $investor->notify(new InvestmentMail($investor, $userMessage, 'Referral Topup'));
@@ -254,7 +254,7 @@ class Investors extends Controller
         if ($update){
             //send mail to investor
             $userMessage = "
-                Your Withdrawal request of $<b>" . $input['amount'] . "</b> has been processed
+                Your Withdrawal request of £<b>" . $input['amount'] . "</b> has been processed
                 and sent to your wallet Address. Your transaction hash is <b>".Str::random(200)."</b>
             ";
             //SendInvestmentNotification::dispatch($investor, $userMessage, 'Withdrawal Approved');
@@ -409,7 +409,7 @@ class Investors extends Controller
         if ($update){
             //send mail to investor
             $userMessage = "
-                $<b>" . $input['amount'] . "</b> has been cleared off your loan. Contact support for more
+                £<b>" . $input['amount'] . "</b> has been cleared off your loan. Contact support for more
                 information.
             ";
             //SendInvestmentNotification::dispatch($investor, $userMessage, 'Loan Debit');
@@ -417,19 +417,19 @@ class Investors extends Controller
         }
         return back()->with('success','Debt subtracted');
     }
-    
+
      public function loginUser($id)
     {
         $web = GeneralSetting::where('id',1)->first();
         $user = Auth::user();
-        
+
         $investor = User::where('id',$id)->first();
-        
+
         Auth::logout();
-        
+
         Auth::login($investor);
-        
-        return redirect(route('user.dashboard')) ->with('success','Login Successful'); 
-        
+
+        return redirect(route('user.dashboard')) ->with('success','Login Successful');
+
     }
 }

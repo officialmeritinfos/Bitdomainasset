@@ -129,7 +129,7 @@ class InvestmentReturn extends Command
                             //send a mail to investor
                             $userMessage = "
                                 Your Investment with reference Id is <b>".$investment->reference."</b> has returned
-                                <b>$".$profitToAdd."</b> to your account. <br> You can find this in the specific
+                                <b>£".$profitToAdd."</b> to your account. <br> You can find this in the specific
                                 investment Current Profit column. <br>
                                 <p>Please Note: <b>All returns will be credited to your profit balance at the end of
                                 the cycle.</b></p>

@@ -25,7 +25,7 @@
                     @foreach($deposits as $deposit)
                         <tr>
                             <td>{{$deposit->reference}}</td>
-                            <td>{{number_format($deposit->amount,2)}}</td>
+                            <td>£{{number_format($deposit->amount,2)}}</td>
                             <td>{{$deposit->asset}}</td>
                             <td>{{$deposit->paymentRef}}</td>
                             <td>{{$deposit->created_at}}</td>

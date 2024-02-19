@@ -616,7 +616,7 @@
                                 </li>
                                 <li>
                                     <span class="icon-right-arrow"></span>
-                                    Over $40M+ returned
+                                    Over £40M+ returned
                                 </li>
                             </ul>
                             <div class="btn-box">

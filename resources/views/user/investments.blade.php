@@ -26,9 +26,9 @@
                     @foreach($investments as $investment)
                         <tr>
                             <td>{{$investment->reference}}</td>
-                            <td>{{number_format($investment->amount,2)}}</td>
+                            <td>£{{number_format($investment->amount,2)}}</td>
                             <td>{{$investment->roi}}%</td>
-                            <td>{{$investment->currentProfit}}</td>
+                            <td>£{{$investment->currentProfit}}</td>
                             <td>{{$investment->created_at}}</td>
                             <td>
                                 @switch($investment->status)

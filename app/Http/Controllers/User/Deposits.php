@@ -117,7 +117,7 @@ class Deposits extends Controller
             //check if admin exists
             $admin = User::where('is_admin',1)->first();
             $userMessage = "
-                Your new deposit request of $<b>".$input['amount']." worth of ".$input['asset']."</b>
+                Your new deposit request of £<b>".$input['amount']." worth of ".$input['asset']."</b>
                 has been received and awaiting payment. To complete your deposit, send your payment to the Address
                 below: <br>
                 <b>Wallet Address:</b> ".$address.".
@@ -128,7 +128,7 @@ class Deposits extends Controller
             //send mail to Admin
             if (!empty($admin)){
                 $adminMessage = "
-                    A new deposit request of $<b>".$input['amount']." worth of ".$input['asset']."</b>
+                    A new deposit request of £<b>".$input['amount']." worth of ".$input['asset']."</b>
                     has been placed by the investor <b>".$user->name."</b> with reference <b>".$reference."</b>
                 ";
                 //SendDepositNotification::dispatch($admin,$adminMessage,'New Pending Deposit');
