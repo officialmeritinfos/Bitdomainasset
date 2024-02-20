@@ -71,7 +71,7 @@
                                 <td>£{{number_format($investment->amount,2)}}</td>
                                 <td>£{{number_format($investment->currentProfit,2)}}</td>
                                 <td>{{number_format($investment->roi)}}%</td>
-                                <td>${{number_format($investment->profitPerReturn*$investment->numberOfReturns,2)}}</td>
+                                <td>£{{number_format($investment->profitPerReturn*$investment->numberOfReturns,2)}}</td>
                             </tr>
                             </tbody>
 
